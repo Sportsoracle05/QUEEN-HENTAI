@@ -1,17 +1,17 @@
 let handler = async m => m.reply(`
 
-   *💝 Queen Hentai 💝* WA Group
-🔊 Join Public Bot Group And Support
-https://chat.whatsapp.com/Jyjqx7KBfgjDC7QcefHB1S
+   *💝 Queen Oracle 💝* WA Group
+🔊 Join OOS Fantasy Leagues
+https://chat.whatsapp.com/Kr05jMZ5YNM9X7pBPzH7tv
 ─────────────
-🔊 *Github*
-https://github.com/dinuwah/QUEEN-HENTAI
+🔊 *Application*
+https://bit.ly/43BQzLP
  
 🔊 *Contact*
-wa.me:94740804536
+wa.me:2349085771938
 
 🔊 *Instagram*
-https://instagram.com/Dinuwa Official²⁰²³
+https://instagram.com/oosfantasyleagues
 
 `.trim())
 handler.help = ['gphentai']
