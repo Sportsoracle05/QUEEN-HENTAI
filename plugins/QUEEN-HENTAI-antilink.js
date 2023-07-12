@@ -16,8 +16,8 @@ export async function before(m, {conn, isAdmin, isBotAdmin }) {
         }
         await conn.reply(m.chat, `*💝 Queen Hentai 💝Link Detected*
             
-💝 Queen Hentai 💝Team doesn't allow links from other groups. 
-I'M Sorry, 💝 Queen Hentai 💝 WA BOT *@${m.sender.split('@')[0]}*  Will Be Kicked Out Of The Group 😁 ${isBotAdmin ? '' : '\n\n💝 Queen Hentai 💝 Not An Admin So I Cannot fuckoff 🤣 You :"v'}`, null, { mentions: [m.sender] } )
+💝 Queen Oracle 💝Team doesn't allow links from other groups. 
+I'M Sorry, 💝 Queen Oracle 💝 WA BOT *@${m.sender.split('@')[0]}*  Will Be Kicked Out Of The Group 😁 ${isBotAdmin ? '' : '\n\n💝 Queen Oracle 💝 Not An Admin So I Cannot fuckoff 🤣 You :"v'}`, null, { mentions: [m.sender] } )
         if (isBotAdmin && chat.antiLink) {
         	await conn.sendMessage(m.chat, { delete: m.key })
             await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
