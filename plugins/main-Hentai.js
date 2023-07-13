@@ -11,7 +11,7 @@ https://bit.ly/43BQzLP
 wa.me/2349085771938
 
 🔊 *Instagram*
-https://instagram.com/oosfantasyleagues
+https://instagram.com/oosfantasyleague
 
 `.trim())
 handler.help = ['gphentai']
