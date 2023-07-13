@@ -9,19 +9,23 @@ export async function before(m, {conn, isAdmin, isBotAdmin }) {
     let bot = global.db.data.settings[this.user.jid] || {}
     const isGroupLink = linkRegex.exec(m.text)
 
-    if (chat.antiLink && isGroupLink && !isAdmin) {
-        if (isBotAdmin) {
-            const linkThisGroup = `https://chat.whatsapp.com/${await this.groupInviteCode(m.chat)}`
-            if (m.text.includes(linkThisGroup)) return !0
-        }
-        await conn.reply(m.chat, `*💝 Queen Oracle 💝Link Detected*
-            
-💝 Queen Oracle 💝Team doesn't allow links from other groups. 
-I'M Sorry, 💝 Queen Oracle 💝 WA BOT *@${m.sender.split('@')[0]}*  Will Be Kicked Out Of The Group 😁 ${isBotAdmin ? '' : '\n\n💝 Queen Oracle 💝 Not An Admin So I Cannot fuckoff 🤣 You :"v'}`, null, { mentions: [m.sender] } )
-        if (isBotAdmin && chat.antiLink) {
-        	await conn.sendMessage(m.chat, { delete: m.key })
-            await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-        } else if (!chat.antiLink) return //m.reply('')
+    if (AntiLinkAll)
+   if (budy.includes("https://")){
+if (!isBotAdmins) return
+bvl = `\`\`\`「 Link Detected 」\`\`\`\n\nAdmin has sent a link, admin is free to send any link😇`
+if (isAdmins) return m.reply(bvl)
+if (m.key.fromMe) return m.reply(bvl)
+if (XeonTheCreator) return m.reply(bvl)
+        await XeonBotInc.sendMessage(m.chat,
+			    {
+			        delete: {
+			            remoteJid: m.chat,
+			            fromMe: false,
+			            id: m.key.id,
+			            participant: m.key.participant
     }
-    return !0
-}
+			    })
+			XeonBotInc.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
+XeonBotInc.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
+} else {
+    }
