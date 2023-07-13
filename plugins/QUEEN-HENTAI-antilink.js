@@ -9,23 +9,32 @@ export async function before(m, {conn, isAdmin, isBotAdmin }) {
     let bot = global.db.data.settings[this.user.jid] || {}
     const isGroupLink = linkRegex.exec(m.text)
 
-    if (AntiLinkAll)
-   if (budy.includes("https://")){
-if (!isBotAdmins) return
-bvl = `\`\`\`「 Link Detected 」\`\`\`\n\nAdmin has sent a link, admin is free to send any link😇`
-if (isAdmins) return m.reply(bvl)
-if (m.key.fromMe) return m.reply(bvl)
-if (XeonTheCreator) return m.reply(bvl)
-        await XeonBotInc.sendMessage(m.chat,
-			    {
-			        delete: {
-			            remoteJid: m.chat,
-			            fromMe: false,
-			            id: m.key.id,
-			            participant: m.key.participant
     }
-			    })
-			XeonBotInc.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
-XeonBotInc.sendMessage(from, {text:`\`\`\`「 Link Detected 」\`\`\`\n\n@${m.sender.split("@")[0]} Has been kicked because of sending link in this group`, contextInfo:{mentionedJid:[m.sender]}}, {quoted:m})
-} else {
-    }
+		if (match == 'on' || match == 'off') {
+			if (match == 'off' && !antilink)
+				return await message.send('_AntiLink is not enabled._')
+			await setAntiLink(message.jid, match == 'on')
+			return await message.send(
+				`_AntiLink ${match == 'on' ? 'Enabled' : 'Disabled.'}_`
+			)
+		}
+		if (match == 'info')
+			return await message.send(
+				`*AntiLink :* ${antilink.enabled ? 'on' : 'off'}\n*AllowedUrl :* ${
+					antilink.allowedUrls
+				}\n*Action :* ${antilink.action}`
+			)
+		if (match.startsWith('action/')) {
+			await setAntiLink(message.jid, match)
+			const action = match.replace('action/', '')
+			if (!['warn', 'kick', 'null'].includes(action))
+				return await message.send('*Invalid action*')
+			return await message.send(`_AntiLink action updated as ${action}_`)
+		}
+		const res = await setAntiLink(message.jid, match)
+		return await message.send(
+			`_AntiLink allowed urls are_\nAllow - ${res.allow.join(
+				', '
+			)}\nNotAllow - ${res.notallow.join(', ')}`
+		)
+}
