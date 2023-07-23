@@ -10,7 +10,7 @@ import {
 let handler = async (m, { conn, __dirname, args }) => {
 
 m.reply(`🇱🇰 The folder was cleaned *tmp + sessions*`)
-m.react(done)
+m.react(☑️)
 const tmp = [tmpdir(), join(__dirname, '../tmp')]
   const filename = []
   tmp.forEach(dirname => readdirSync(dirname).forEach(file => filename.push(join(dirname, file))))
