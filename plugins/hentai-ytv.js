@@ -33,13 +33,12 @@ let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) =
         m.chat,
         fs.readFileSync(fileName),
         `${info.videoDetails.videoId}.mp4`,
-        `✼ ••๑⋯❀ 💝 Queen Oracle 💝 ❀⋯⋅๑•• ✼
-	  
-	  💝 Title: ${info.videoDetails.title}
+        `💝 Title: ${info.videoDetails.title}
 	  💝 Duration: ${info.videoDetails.lengthSeconds} seconds
+   
 	  
 	  
-	  ⊱─━⊱༻●༺⊰━─⊰`,
+	  ⊱─━⊱༻ *Queen Oracle* ༺⊰━─⊰`,
         m,
         false,
         { asDocument: chat.useDocument }
