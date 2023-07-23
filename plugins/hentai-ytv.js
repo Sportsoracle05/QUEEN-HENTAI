@@ -37,9 +37,7 @@ let handler = async (m, { conn, args, isPrems, isOwner, usedPrefix, command }) =
 	  
 	  💝 Title: ${info.videoDetails.title}
 	  💝 Duration: ${info.videoDetails.lengthSeconds} seconds
-	  💝 Views: ${info.videoDetails.viewCount}
-	  💝 Upload: ${info.videoDetails.publishDate}
-	  💝 Link: ${args[0]}
+	  
 	  
 	  ⊱─━⊱༻●༺⊰━─⊰`,
         m,
