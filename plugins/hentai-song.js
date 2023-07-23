@@ -15,9 +15,9 @@ var handler = async (m, { conn, command, text, usedPrefix }) => {
   let vid = search.videos[Math.floor(Math.random() * search.videos.length)];
   if (!search) throw 'Video Not Found, Try Another Title';
   let { title, thumbnail, timestamp, views, ago, url } = vid;
-  let wm = ' 💝 Queen Hentai WA Bot 💝';
+  let wm = ' 💝 Queen Oracle WA Bot 💝';
 
-  let captvid = `💝 Queen Hentai Downloading audio💝 please wait`;
+  let captvid = `💝 Queen Oracle Downloading audio💝 please wait`;
 
   conn.sendMessage(m.chat, { image: { url: thumbnail }, caption: captvid, footer: author }, { quoted: m });
 
