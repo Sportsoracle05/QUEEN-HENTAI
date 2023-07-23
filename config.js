@@ -34,7 +34,8 @@ global.APIs = { // API Prefix
   akuari2: 'https://apimu.my.id',
   nrtm: 'https://fg-nrtm.ddns.net',
   bg: 'http://bochil.ddns.net',
-  fgmods: 'https://api-fgmods.ddns.net'
+  fgmods: 'https://api-fgmods.ddns.net',
+  livescore: 'https://allsportsapi.com'
 }
 global.APIKeys = { // APIKey Here
   // 'https://website': 'apikey'
@@ -43,7 +44,8 @@ global.APIKeys = { // APIKey Here
   'https://api.neoxr.my.id': `${keysneoxr}`,	
   'https://violetics.pw': 'beta',
   'https://zenzapis.xyz': `${keysxxx}`, 
-  'https://api-fgmods.ddns.net': 'fg-dylux'
+  'https://api-fgmods.ddns.net': 'fg-dylux',
+  'https://allsportsapi.com': 'e09b909145afee2ae3c555e628f646849f50d90b89fa5aed97a5cd995d1ba17d'
 }
 
 // Sticker WM
@@ -59,11 +61,11 @@ global.fgpyp = 'https://chat.whatsapp.com/Kr05jMZ5YNM9X7pBPzH7tv'
 global.fglog = 'https://i.ibb.co/T1DqdYz/thumbnail.jpg' 
 
 
-global.wait = '*💝 _Waiting Bro Uploading by 💝 Queen Oracle 💝..._*'
-global.rwait = '🇱🇰'
+global.wait = '*⌛ _Oracle bot loading..._* *▰▰▰▱▱▱▱▱*⊱─━━━━⊱༻●༺⊰━━━━─⊰'
+global.rwait = '⏳'
 global.dmoji = '🤣'
-global.done = '👍'
-global.error = '👎' 
+global.done = '☑️'
+global.error = '❌' 
 global.xmoji = '🫶' 
 
 global.multiplier = 69 
