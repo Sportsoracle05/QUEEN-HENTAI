@@ -17,12 +17,8 @@ var handler = async (m, { conn, command, text, usedPrefix }) => {
   let { title, thumbnail, timestamp, views, ago, url } = vid;
   let wm = '*⌛ _Oracle bot loading..._* *▰▰▰▱▱▱▱▱*';
 
-  let captvid = `✼ ••๑⋯ ❀ 💝 Queen Oracle 💝 ❀ ⋯⋅๑•• ✼
-  💝 Title: ${title}
-  💝 Duration: ${timestamp}
-  💝 Views: ${views}
-  💝 Upload: ${ago}
-  💝 Link: ${url}
+  let captvid = `*⌛ _Oracle bot loading..._* *▰▰▰▱▱▱▱▱*
+
 ⊱─━━━━⊱༻●༺⊰━━━━─⊰`;
 
   conn.sendMessage(m.chat, { image: { url: thumbnail }, caption: captvid, footer: author }, { quoted: m });
