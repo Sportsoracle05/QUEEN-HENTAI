@@ -46,7 +46,7 @@ bot(
 		}
 		if (!opponent || opponent == me)
 			return await message.send(
-				'*Choose an Opponent*\n*Reply to a message or mention or tictactoe jid1 jid2*'
+				'*Choose an Opponent*\n*Reply to a message / mention or tictactoe jid1 jid2*'
 			)
 		const { text } = await ticTacToe(message.jid, me, opponent)
 		return await message.send(text, {
