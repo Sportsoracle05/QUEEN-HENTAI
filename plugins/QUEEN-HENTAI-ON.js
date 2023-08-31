@@ -4,7 +4,7 @@ let handler = async (m, { conn, usedPrefix, command, args, isOwner, isAdmin, isR
 	
 const sections = [
    {
-	title: `💝 Queen Oracle 💝`,
+	title: `💝 Queen Hentai 💝`,
 	rows: [
 	{title: "🇱🇰 | Welcome", rowId: `${usedPrefix + command} welcome`},
 	{title: "🇱🇰 | Public", rowId: `${usedPrefix + command} public`},
@@ -25,9 +25,9 @@ const sections = [
 ]
 
 const listMessage = {
-  text: '\nThis is the list of 💝 Queen Oracle 💝 Now you can turn on and off it',
+  text: '\nThis is the list of 💝 Queen Hentai 💝 Now you can turn on and off it',
   footer: igfg,
-  title: `💝 Queen Oracle 💝`,
+  title: `💝 Queen Hentai 💝`,
   buttonText: "💝 Click here 💝",
   sections
 }
@@ -53,7 +53,23 @@ const listMessage = {
       }
       chat.welcome = isEnable
       break
-      
+     case 'jarvis':
+     case 'autotalk':
+      if (m.isGroup) {
+        if (!(isAdmin || isOwner)) {
+          global.dfail('admin', m, conn)
+           throw false
+          }}
+      chat.jarvis = isEnable
+     break
+	case 'pmblocker':
+isAll = true
+if (!isROwner) {
+global.dfail('rowner', m, conn)
+throw false
+}
+bot.pmblocker = isEnable
+break	   
       case 'detect':
       case 'detector':
         if (!m.isGroup) {
@@ -191,12 +207,14 @@ const listMessage = {
      if (!/[01]/.test(command)) return m.reply(`
 🔊 welcome
 🔊 antilink
+🔊 pmblocker
 🔊 nsfw
 🔊 onlyenglish
 🔊 autosticker
 🔊 antidelete
 🔊 public
 🔊 onlydm
+🔊 grouponly
 `)
       throw false
   }
@@ -211,7 +229,7 @@ const listMessage = {
 */
 
 m.reply(`
-😁 *${type}* ££££ *${isEnable ? '*INSTALL*' : '*UNINSTALL*'}* ${isAll ? 'for *💝 Queen Oracle 💝* bot' : isUser ? '' : 'for *💝 Queen Oracle 💝* bot'}
+😁 *${type}* ££££ *${isEnable ? '*INSTALL*' : '*UNINSTALL*'}* ${isAll ? 'for *💝 Queen Hentai 💝* bot' : isUser ? '' : 'for *💝 Queen Hentai 💝* bot'}
 `.trim()) 
 
 }
